@@ -5,7 +5,7 @@ export default function Help() {
 
 
     <View style={styles.container}>
-      <Text> Seja bem-vindo! Daniel Samba
+      <Text> Aqui vc obtem ajuda sobre os serviços da Unitel
       </Text>
     </View>
 
