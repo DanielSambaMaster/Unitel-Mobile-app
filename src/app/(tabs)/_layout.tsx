@@ -12,6 +12,7 @@ const Tabbaricons =({focused, icon}:any) => {
     return (
       <>
       <FontAwesome name={icon} size={24} color="rgb(168, 168, 165)" />
+    
       </>
     )
   }
