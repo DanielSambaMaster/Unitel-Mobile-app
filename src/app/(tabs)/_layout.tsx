@@ -1,13 +1,54 @@
 import { Tabs } from "expo-router";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+const Tabbaricons =({focused, icon}:any) => {
+  if(focused){
+    return (
+      <>
+      <FontAwesome name={icon} size={30} color="#ee6700" />
+      </>
+    )
+  
+  }else{
+    return (
+      <>
+      <FontAwesome name={icon} size={24} color="rgb(168, 168, 165)" />
+      </>
+    )
+  }
+ 
+
+
+
+}
 
 export default function RootLayout() {
+
+
+
+
+
+
+
   return (
-    <Tabs  >
+    <Tabs 
+    screenOptions={{
+      tabBarStyle: {
+        height: 80,
+        width: "100%",
+        backgroundColor: "rgb(255, 255, 255)",
+      
+        
+      }}}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: "State",
+          title: "Home",
           headerShown: false,
+           tabBarIcon:({focused}) =>(
+          <Tabbaricons  focused={focused} icon={"home"}/>
+        ),
+
         }}
       />
       
@@ -16,6 +57,9 @@ export default function RootLayout() {
         options={{
           title: "Plans",
           headerShown: false,
+           tabBarIcon:({focused}) =>(
+          <Tabbaricons  focused={focused} icon={"cloud"}/>
+        ),
         }}
       />
 
@@ -24,6 +68,9 @@ export default function RootLayout() {
         options={{
           title: "Services",
           headerShown: false,
+           tabBarIcon:({focused}) =>(
+          <Tabbaricons  focused={focused} icon={"plus"}/>
+        ),
         }}
       />
 
@@ -32,6 +79,9 @@ export default function RootLayout() {
         options={{
           title: "Network",
           headerShown: false,
+           tabBarIcon:({focused}) =>(
+          <Tabbaricons  focused={focused} icon={"wifi"}/>
+        ),
         }}
       />
           <Tabs.Screen
@@ -39,6 +89,9 @@ export default function RootLayout() {
         options={{
           title: "Help",
           headerShown: false,
+           tabBarIcon:({focused}) =>(
+          <Tabbaricons  focused={focused} icon={"headphones"}/>
+        ),
         }}
       />
      
